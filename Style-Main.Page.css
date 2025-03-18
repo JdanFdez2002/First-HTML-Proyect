@@ -1,0 +1,71 @@
+h1, h2, h3, li {color: white;}
+h1 {font-size: 2.8rem;
+    margin-bottom: 0.5rem}
+h2 {font-size: 2.2rem;
+    margin-bottom: 0.5rem}
+li {font-size: 1.25rem;}
+p{
+    font-size: 0.9rem;
+    color: white;
+    opacity: 75%;}
+p1{
+    font-size: 1.1rem;
+    color: white;
+    opacity: 75%;}
+
+a {
+    color: rgba(0, 238, 255, 0.705);
+    text-decoration: none;
+    transition: color 0.4s ease;}
+
+
+body {
+    background-image: url("./Assets/Images/BG%20(17).jpg");
+    background-repeat: repeat;  /* Repetir en ambos ejes, X y Y */
+    background-size: 17.5%;  /* Tamaño de imagen */
+    background-attachment: fixed;
+    /* Animación de desplazamiento */
+    animation: scrollBackground 25s linear infinite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+body::before {
+    content: "";  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    opacity: 0.75; 
+    z-index: -1;}
+
+
+.contenedor {
+    padding: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.877);
+    padding-top: 10px;
+    padding-bottom: 55px;
+    padding-left: 20px;
+    padding-right: 25px;
+    border-radius: 10px;
+    border: 4px solid rgb(255, 255, 255);
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+
+@keyframes scrollBackground {
+    from { background-position: top center;}
+    to {background-position: bottom center;}
+}
+
+a:hover{
+    color: lightsteelblue;}
